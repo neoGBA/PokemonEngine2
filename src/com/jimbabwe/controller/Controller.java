@@ -4,11 +4,14 @@ import org.newdawn.slick.AppGameContainer;
 import org.newdawn.slick.BasicGame;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
+import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 
 public class Controller extends BasicGame{
 	
-	boolean battle = false;
+	boolean drawBattle = true;
+	
+	Image battleBG;
 	
 	public Controller() {
 		super("Pokemon Engine");
@@ -16,7 +19,6 @@ public class Controller extends BasicGame{
 
 	public void start() {
 		buildWindow();
-		battle fight = new battle();
 	}
 	
 	public void buildWindow() {
@@ -32,16 +34,22 @@ public class Controller extends BasicGame{
 		}
 	}
 	
+	private void drawBattle(Graphics g) {
+		if(drawBattle) {
+			battleBG.draw(0,0);
+		}
+	}
+	
 	public void render(GameContainer container, Graphics g) throws SlickException {
-		
+		drawBattle(g);
 	}
 
 	public void init(GameContainer container) throws SlickException {
-		
+		battleBG = new Image("/Images/Gen4/grassBG.png");
 	}
 
 	public void update(GameContainer container, int delta) throws SlickException {
-		
+		battle fight = new battle();
 	}
 	
 }

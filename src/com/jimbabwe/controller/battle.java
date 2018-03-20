@@ -1,5 +1,7 @@
 package com.jimbabwe.controller;
 
+import com.jimbabwe.pokemon.*;
+
 public class battle {
 	
 	//MAKE CONSTRUCTOR PASSING IN ENEMY TEAM? (and Levels)
@@ -12,7 +14,9 @@ public class battle {
 	public void startBattle() {
 		//ONLY RUN ONCE
 		//intro animation
+		
 		//get enemy sprite
+		
 		//get ally backsprite
 	}
 	

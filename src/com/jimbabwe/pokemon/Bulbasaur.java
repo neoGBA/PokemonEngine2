@@ -7,6 +7,8 @@ public class Bulbasaur {
 	String type = "Grass";
 	String type2 = "Poison";
 	
+	String filePath = "/Images/Gen4/001.png";
+	
 	int baseHP = 45;
 	int baseAttack = 49;
 	int baseDefense = 49;
@@ -50,6 +52,12 @@ public class Bulbasaur {
 		speed = formula.calculateOtherStat(baseSpeed, speedIV, level);
 		
 		//determine moves by level
+		
+	}
+	
+	public String getFilePath() {
+		String path = filePath;
+		return filePath;
 	}
 	
 	public String getType() {
